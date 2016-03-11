@@ -1,0 +1,26 @@
+{
+  "name": "epages-rest-nodejs",
+  "version": "0.1.0",
+  "description": "NodeJS SDK for epages e-commerce platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vilkasgroup/epages-rest-nodejs.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "rest",
+    "epages",
+    "sdk",
+    "node"
+  ],
+  "author": "Vilkas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vilkasgroup/epages-rest-nodejs/issues"
+  },
+  "homepage": "https://github.com/vilkasgroup/epages-rest-nodejs#readme"
+}
