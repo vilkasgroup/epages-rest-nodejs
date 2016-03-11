@@ -17,7 +17,7 @@
     "sdk",
     "node"
   ],
-  "author": "Vilkas",
+  "author": "Timo Kallela <timok@vilkas.fi>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vilkasgroup/epages-rest-nodejs/issues"
