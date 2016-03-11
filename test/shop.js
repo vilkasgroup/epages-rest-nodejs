@@ -9,3 +9,4 @@ shop.log(1, 2, 3);
 shop.getCurrencies(function(err, currencies) {
 	shop.log(currencies);
 });
+
