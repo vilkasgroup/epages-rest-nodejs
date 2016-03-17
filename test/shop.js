@@ -24,8 +24,8 @@ shop.misc.getDefaultLocale(function(err, locale) {
 });*/
 
 shop.legal.getContactInformation(null, function(json) {
-	shop.log(json);
 	json.shortDescription = "FOOBAR";
+	shop.log(json);
 	shop.legal.setContactInformation(null, json, function(newjson) {
 		shop.log(newjson);
 	});
