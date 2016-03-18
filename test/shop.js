@@ -23,6 +23,7 @@ shop.misc.getDefaultLocale(function(err, locale) {
 	shop.log("default locale", locale);
 });*/
 
+shop.log("==========================================================");
 shop.legal.getContactInformation(null, function(json) {
 	shop.log("from server ======", json.shortDescription);
 	json.shortDescription = "FOOBAR";
