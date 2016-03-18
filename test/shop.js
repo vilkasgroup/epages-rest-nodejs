@@ -24,9 +24,13 @@ shop.misc.getDefaultLocale(function(err, locale) {
 });*/
 
 shop.legal.getContactInformation(null, function(json) {
+	shop.log("from server ======", json.shortDescription);
 	json.shortDescription = "FOOBAR";
-	shop.log(json);
-	shop.legal.setContactInformation(null, json, function(newjson) {
-		shop.log(newjson);
+	shop.log("changed to ======", json.shortDescription);
+	shop.legal.setContactInformation(null, json, function(response) {
+		shop.log("response  ======", response);
+		shop.legal.getContactInformation(null, function(newjson) {
+			shop.log("again from server ======", newjson.shortDescription);
+		})
 	});
 });
