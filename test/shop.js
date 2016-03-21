@@ -25,13 +25,9 @@ shop.misc.getDefaultLocale(function(err, locale) {
 
 shop.log("==========================================================");
 shop.legal.getContactInformation(null, function(json) {
-	shop.log("from server ======", json.shortDescription);
-	json.shortDescription = "FOOBAR";
-	shop.log("changed to ======", json.shortDescription);
+	json.shortDescription = Date.now().toString();
 	shop.legal.setContactInformation(null, json, function(response) {
-		shop.log("response  ======", response);
 		shop.legal.getContactInformation(null, function(newjson) {
-			shop.log("again from server ======", newjson.shortDescription);
 		})
 	});
 });
