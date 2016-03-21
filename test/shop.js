@@ -24,12 +24,15 @@ shop.misc.getDefaultLocale(function(err, locale) {
 });*/
 
 shop.log("==========================================================");
-shop.legal.getPrivacyPolicy(null, function(err, privacyPolicy) {
-	shop.log("A: name = " + privacyPolicy.getName());
-	privacyPolicy.setName(Date.now().toString());
-	shop.legal.setPrivacyPolicy(null, privacyPolicy, function(err) {
-		shop.legal.getPrivacyPolicy(null, function(err, privacyPolicy) {
-			shop.log("B: name = " + privacyPolicy.getName());
+shop.legal.getContactInformation(null, function(err, tac) {
+	shop.log("A: name = " + tac.getName());
+	shop.log("A: company = " + tac.getCompany());
+	tac.setName("name " + Date.now().toString());
+	tac.setCompany("comp " + Date.now().toString());
+	shop.legal.setContactInformation(null, tac, function(err) {
+		shop.legal.getContactInformation(null, function(err, tac) {
+			shop.log("B: name = " + tac.getName());
+			shop.log("B: company = " + tac.getCompany());
 		})
 	});
 });
