@@ -24,10 +24,12 @@ shop.misc.getDefaultLocale(function(err, locale) {
 });*/
 
 shop.log("==========================================================");
-shop.legal.getContactInformation(null, function(json) {
-	json.shortDescription = Date.now().toString();
-	shop.legal.setContactInformation(null, json, function(response) {
-		shop.legal.getContactInformation(null, function(newjson) {
+shop.legal.getPrivacyPolicy(null, function(err, privacyPolicy) {
+	shop.log("A: name = " + privacyPolicy.getName());
+	privacyPolicy.setName(Date.now().toString());
+	shop.legal.setPrivacyPolicy(null, privacyPolicy, function(err) {
+		shop.legal.getPrivacyPolicy(null, function(err, privacyPolicy) {
+			shop.log("B: name = " + privacyPolicy.getName());
 		})
 	});
 });
